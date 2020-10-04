@@ -465,25 +465,11 @@
                 calculate: function () {
                     let squareFeet = this.input;
 
-                    let flat_charge = 1000;
+                    let flat_charge = 100;
 
+                    this.price = 100 + (0.10 * squareFeet)
 
-                    if (squareFeet <= 1000) {
-                        return this.price = flat_charge;
-                    }
-
-                    else {
-
-                        let extr_charge = 500;
-
-                        let extra_square_feet = this.input - 1000;
-
-                        let extra_price = extra_square_feet * extr_charge;
-
-                        this.price = extra_price + flat_charge;
-
-                        return this.price;
-                    }
+                    return this.price;
 
                 }
             }
